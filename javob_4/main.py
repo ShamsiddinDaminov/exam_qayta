@@ -31,15 +31,14 @@ async def start_handler(msg: Message, state: FSMContext):
 @dp.message(Menu.news)
 async def menu_handler(msg: Message, state: FSMContext):
     response = requests.get("https://kun.uz/")
-    soup = BeautifulSoup(response.text, "html.parser")
-    img = soup.find("img", "lazyfade")['data-src']
-    for i in soup.find_all("div", "title-card-group"):
-        txt1 = i.find("h2", "category").text
-        img1 = "https://d18zdz9g6n5za7.cloudfront.net/plan/640/640-o_31_fb-low-impact-round-2-fat-loss-program-40-minutes-or-less.jpg"
-        txt2 = "FB Low Impact Round 2 - Build Muscle & Burn Fat - 40 Minutes or Less "
-        print(img)
-        await msg.answer_photo(f"{img1}", caption=f"{txt1}\n\n{txt2}")
-        break
+    soup = BeautifulSoup(response.text, 'html.parser')
+
+    for i in soup.find_all("div", 'col-md-4'):
+        img = i.find("img")['src']
+        txt1 = i.find("span").text
+        txt2 = i.find("a", "news__title").text
+        await msg.answer_photo(f"{img}", caption=f"\n{txt1}\n\n{txt2}")
+
 
 async def main():
     bot = Bot(token=BOT_TOKEN)
@@ -49,4 +48,3 @@ async def main():
 if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO, stream=sys.stdout)
     asyncio.run(main())
-
