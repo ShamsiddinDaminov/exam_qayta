@@ -1,1 +1,1 @@
-docker push shokh2ake/exam5
+docker push daminovdev/exam
