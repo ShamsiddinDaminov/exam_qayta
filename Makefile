@@ -1,4 +1,4 @@
 restart_doc:
 	docker compose down
-	docker rmi -f exam_qayta-bot
+	docker rmi -f sh_lesson_1_bot
 	docker compose up
