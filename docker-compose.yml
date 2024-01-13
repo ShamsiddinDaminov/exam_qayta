@@ -5,9 +5,9 @@ services:
   bot:
     build: .
     restart: always
-    container_name: exam_qayta-bot
+    container_name: sh_lesson_1_bot
     environment:
-      BOT_TOKEN: 6926663249:AAFSfW2XTFUMmXtbZO0YjYYRtAae0_hrAIQ
+      BOT_TOKEN: 6949726231:AAGJ69DbWuw1GNBavd7tOiKxUXy4Opqk_1s
       DB_NAME: postgres
       DB_PASSWORD: 1
       DB_HOST: pg

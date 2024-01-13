@@ -12,7 +12,7 @@ from dotenv import load_dotenv
 from sqlalchemy import BIGINT, insert, select, create_engine
 from sqlalchemy.orm import declarative_base, Mapped, mapped_column, Session
 
-BOT_TOKEN = getenv("BOT_TOKEN")
+BOT_TOKEN = getenv("6949726231:AAGJ69DbWuw1GNBavd7tOiKxUXy4Opqk_1s")
 dp = Dispatcher(storage=MemoryStorage())
 
 load_dotenv()
