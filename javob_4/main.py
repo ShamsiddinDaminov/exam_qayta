@@ -7,7 +7,7 @@ from aiogram.filters import CommandStart, Command
 from aiogram.fsm.storage.memory import MemoryStorage
 from bs4 import BeautifulSoup
 
-BOT_TOKEN = "6926663249:AAFSfW2XTFUMmXtbZO0YjYYRtAae0_hrAIQ"
+BOT_TOKEN = "6949726231:AAGJ69DbWuw1GNBavd7tOiKxUXy4Opqk_1s"
 dp = Dispatcher(storage=MemoryStorage())
 
 
