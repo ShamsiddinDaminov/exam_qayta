@@ -1,7 +1,7 @@
 import asyncio
 import json
-import time
 import requests
+import time
 from celery import Celery
 
 app = Celery('hello', broker='pyamqp://guest@localhost/')
